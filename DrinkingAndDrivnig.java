@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class drinkingAge{
+public class DrinkingAndDriving{
   public static void main(String[] args){
     Scanner in = new Scanner(System.in
     );
@@ -12,8 +12,8 @@ public class drinkingAge{
       System.out.println("You can drink!");
     }
 
-    else {
-      System.out.println("You can't drink for another "+(21-age)+" years!");
+    else if (){
+
     }
   }
 }
