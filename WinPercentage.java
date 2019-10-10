@@ -54,7 +54,7 @@ public class WinPercentage{
           System.out.println("You must play at least one game." );
         }
         else{
-                  valid = true;
+          valid = true;
         }
 
       }
@@ -71,7 +71,6 @@ public class WinPercentage{
 
     System.out.println("");
     System.out.println("You won "+dFormat.format(wonPercent)+"% of your games.");
-
 
   }
 }
