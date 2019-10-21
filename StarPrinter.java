@@ -4,7 +4,7 @@ public class StarPrinter{
   public static void main(String[] args){
     Scanner in = new Scanner(System.in);
 
-    int WIDTH = 20;
+    int WIDTH = 21;
 
     int option = 0;
 
@@ -28,17 +28,60 @@ public class StarPrinter{
         }
       }
       catch(java.InputMismatchException e){
+        in.next();
         System.out.println("");
         System.out.println("You must input a whole number between 1 and 6.");
       }
     }
 
+    int numStar = 0;
+
     if (option == 1){
       System.out.println("");
-      for (int i = 1; i < 20; ++i){
+      for (int i = 0; i < WIDTH; ++i){
+        numStar = WIDTH - i;
         System.out.println("");
-        for (int k = 1; k < i)
+        for (int k = 1; k < numStar, ++k){
+          System.out.print("*");
+        }
       }
     }
+
+    else if (option == 2){
+      System.out.println("");
+      for (int i = 0; i < WIDTH; ++i){
+        numStar = i;
+        System.out.println("");
+        for (int k = 0; k < (WIDTH - numStar), ++k){
+          System.out.print(" ");
+        }
+        for (int l = 0; l < numStar, ++l){
+          System.out.print("*")
+        }
+      }
+    }
+
+    else if (option == 3){
+      System.out.println("");
+      for (int i = 0; i < WIDTH; ++i){
+        numStar = WIDTH - i;
+        System.out.println("");
+        for (int k = 0; k < numStar, ++k){
+          System.out.print("*");
+        }
+        for (int l = 0; l < (WIDTH - numStar), ++l){
+          System.out.print(" ")
+        }
+      }
+    }
+
+    else if (option == 4){
+      int halfDim = (WIDTH + 1)/2
+
+      for (int i = 0; i < halfDim, ++i){
+        
+      }
+    }
+
   }
 }
