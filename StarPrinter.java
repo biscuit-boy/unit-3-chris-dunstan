@@ -15,6 +15,15 @@ public class StarPrinter{
     // maintains while loop and allows for input testeing
     boolean looping = true;
     boolean valid = false;
+<<<<<<< HEAD
+=======
+    while(!valid){
+      System.out.println("");
+      System.out.pritnln("Give a number 1-5 to get your lucky symbol. ");
+      System.out.println("Say 6 for a surprise. ");
+      System.out.println("");
+      System.out.print("-> ");
+>>>>>>> 18226666ba94cdc4df4fce586e34a6d97ec3c27a
 
     // main loop
     while(looping){
@@ -50,8 +59,21 @@ public class StarPrinter{
           System.out.println(" You must input a whole number between 1 and 6.");
         }
       }
+<<<<<<< HEAD
+=======
+      catch(java.util.InputMismatchException e){
+        in.next();
+        System.out.println("");
+        System.out.println("You must input a whole number between 1 and 6.");
+      }
+    }
+
+    int numStar = 0;
+    int numSpace = 0;
+>>>>>>> 18226666ba94cdc4df4fce586e34a6d97ec3c27a
 
       System.out.println("");
+<<<<<<< HEAD
       System.out.println("----------------------------------------------");
 
       // used within patterns to determine how many stars/spaces will appear
@@ -63,22 +85,35 @@ public class StarPrinter{
       if (option == 0){
         looping = false;
         break;
+=======
+      for (int i = 0; i < WIDTH; ++i){
+        numStar = WIDTH - i;
+        System.out.println("");
+        for (int k = 1; k < numStar; ++k){
+          System.out.print("*");
+        }
+>>>>>>> 18226666ba94cdc4df4fce586e34a6d97ec3c27a
       }
 
       // prints triangle with right angle in NW corner
       else if (option == 1){
         System.out.println("");
+<<<<<<< HEAD
 
         for (int i = 0; i < WIDTH; ++i){
           numStar = WIDTH - i;
 
           System.out.println("");
+=======
+        for (int k = 0; k < (WIDTH - numStar); ++k){
+>>>>>>> 18226666ba94cdc4df4fce586e34a6d97ec3c27a
           System.out.print(" ");
 
           for (int k = 1; k < numStar; ++k){
             System.out.print("*");
           }
         }
+<<<<<<< HEAD
       }
 
       // prints triangle with right angle in SE corner
@@ -100,12 +135,17 @@ public class StarPrinter{
           for (int l = 0; l < numStar; ++l){
             System.out.print("*");
           }
+=======
+        for (int l = 0; l < numStar; ++l){
+          System.out.print("*");
+>>>>>>> 18226666ba94cdc4df4fce586e34a6d97ec3c27a
         }
       }
 
       // prints triangle in NE corner
       else if (option == 3){
         System.out.println("");
+<<<<<<< HEAD
 
         for (int i = 0; i < WIDTH; ++i){
           numStar = WIDTH - i;
@@ -159,9 +199,17 @@ public class StarPrinter{
             for (int k = 0; k<numStar; ++k) {
                 System.out.print("*");
             }
+=======
+        for (int k = 0; k < numStar; ++k){
+          System.out.print("*");
+        }
+        for (int l = 0; l < (WIDTH - numStar); ++l){
+          System.out.print(" ");
+>>>>>>> 18226666ba94cdc4df4fce586e34a6d97ec3c27a
         }
       }
 
+<<<<<<< HEAD
       // prints hourglass
       else if (option == 5){
         int halfDim = (WIDTH + 1)/2;
@@ -197,6 +245,39 @@ public class StarPrinter{
                   System.out.print("*");
               }
           }
+=======
+    else if (option == 4){
+      int halfDim = (WIDTH + 1)/2;
+
+      for (int i = 0; i < halfDim; ++i){
+            numStar = 2 * i + 1;
+            numSpace = (WIDTH - numStar) / 2;
+
+            System.out.println("");
+
+            for (int k = 0; k < numSpace; ++k) {
+                System.out.print(" ");
+            }
+
+            for (int k = 0; k < numStar; ++k) {
+                System.out.print("*");
+            }
+        }
+
+        for (int i = halfDim; i > 0; --i){
+            numStar = 2*i + 1;
+            numSpace = (WIDTH - numStar)/2;
+
+            System.out.println("");
+
+            for (int k = 0; k < numSpace; ++k){
+                System.out.print(" ");
+            }
+
+            for (int k = 0; k<numStar; ++k) {
+                System.out.print("*");
+            }
+>>>>>>> 18226666ba94cdc4df4fce586e34a6d97ec3c27a
       }
 
       // prints sine wave
