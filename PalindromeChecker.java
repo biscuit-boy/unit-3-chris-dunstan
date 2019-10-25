@@ -25,7 +25,7 @@ public class PalindromeChecker{
     Scanner in = new Scanner(System.in);
 
     System.out.print("Give a phrase you think is a palindrome! \n -> ");
-    String text = in.next();
+    String text = in.nextLine();
     System.out.println("");
 
     text = rawText(text);
