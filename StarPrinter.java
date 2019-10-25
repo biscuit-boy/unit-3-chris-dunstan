@@ -16,13 +16,6 @@ public class StarPrinter{
     boolean looping = true;
     boolean valid = false;
 
-    while(!valid){
-      System.out.println("");
-      System.out.pritnln("Give a number 1-5 to get your lucky symbol. ");
-      System.out.println("Say 6 for a surprise. ");
-      System.out.println("");
-      System.out.print("-> ");
-
     // main loop
     while(looping){
       valid = false;
@@ -46,7 +39,8 @@ public class StarPrinter{
           if (option >= 0 && option <= 6){
             valid = true;
           }
-          else{
+
+          else {
             System.out.println("");
             System.out.println(" You must input a number between 1 and 6.");
           }
@@ -56,17 +50,7 @@ public class StarPrinter{
           System.out.println("");
           System.out.println(" You must input a whole number between 1 and 6.");
         }
-      }
-
-      catch(java.util.InputMismatchException e){
-        in.next();
-        System.out.println("");
-        System.out.println("You must input a whole number between 1 and 6.");
-      }
     }
-
-    int numStar = 0;
-    int numSpace = 0;
 
       System.out.println("");
       System.out.println("----------------------------------------------");
@@ -80,13 +64,6 @@ public class StarPrinter{
       if (option == 0){
         looping = false;
         break;
-
-      for (int i = 0; i < WIDTH; ++i){
-        numStar = WIDTH - i;
-        System.out.println("");
-        for (int k = 1; k < numStar; ++k){
-          System.out.print("*");
-        }
       }
 
       // prints triangle with right angle in NW corner
@@ -95,9 +72,9 @@ public class StarPrinter{
 
         for (int i = 0; i < WIDTH; ++i){
           numStar = WIDTH - i;
+          numSpace = (WIDTH - numStar);
 
           System.out.println("");
-        for (int k = 0; k < (WIDTH - numStar); ++k){
           System.out.print(" ");
 
           for (int k = 1; k < numStar; ++k){
@@ -125,8 +102,6 @@ public class StarPrinter{
           for (int l = 0; l < numStar; ++l){
             System.out.print("*");
           }
-        for (int l = 0; l < numStar; ++l){
-          System.out.print("*");
         }
       }
 
@@ -186,12 +161,7 @@ public class StarPrinter{
             for (int k = 0; k<numStar; ++k) {
                 System.out.print("*");
             }
-        for (int k = 0; k < numStar; ++k){
-          System.out.print("*");
-        }
-        for (int l = 0; l < (WIDTH - numStar); ++l){
-          System.out.print(" ");
-        }
+          }
       }
 
       // prints hourglass
@@ -229,6 +199,7 @@ public class StarPrinter{
                   System.out.print("*");
               }
           }
+    }
 
     else if (option == 4){
       int halfDim = (WIDTH + 1)/2;
@@ -261,6 +232,7 @@ public class StarPrinter{
             for (int k = 0; k<numStar; ++k) {
                 System.out.print("*");
             }
+          }
       }
 
       // prints sine wave
